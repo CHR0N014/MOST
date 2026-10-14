@@ -211,7 +211,7 @@ def render_category(site, cat, topics):
 
 
 
-def render_index(site, topics):
+def render_index(site, topics, ad_html):
     base = site["base_url"].rstrip("/")
     cats = sorted({t["category"] for t in topics})
     cats_nav = " &middot; ".join(
@@ -257,7 +257,7 @@ def render_index(site, topics):
 <main class="wrap">
   <h1>{E(site["tagline"])}</h1>
   <p class="muted">Guias diretos para organizar o dinheiro, sair de dividas e comecar a investir.</p>
-  <div class="ad-slot">{E(read_ads())}</div>
+  <div class="ad-slot">{ad_html}</div>
   <h2>Categorias</h2>
   <p>{cats_nav}</p>
   <h2>Guias</h2>
@@ -310,7 +310,7 @@ def main():
     for cat, group in cats.items():
         (catdir / f"{slugify(cat)}.html").write_text(
             render_category(site, cat, group), encoding="utf-8")
-    (ROOT / "index.html").write_text(render_index(site, topics), encoding="utf-8")
+    (ROOT / "index.html").write_text(render_index(site, topics, ad_html), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(render_sitemap(site, topics), encoding="utf-8")
     (ROOT / "robots.txt").write_text(render_robots(site), encoding="utf-8")
     print(f"Gerado: {len(topics)} paginas + index + sitemap + robots")
