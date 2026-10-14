@@ -32,6 +32,7 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" type="application/rss+xml" title="Feed" href="../feed.xml">
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
@@ -176,6 +177,7 @@ def render_category(site, cat, topics):
 <meta name="description" content="Guias de {E(cat)} em financas pessoais. {len(topics)} artigos praticos.">
 <link rel="canonical" href="{E(base)}/categoria/{E(slug)}.html">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" type="application/rss+xml" title="Feed" href="../feed.xml">
 </head>
 <body>
 <header class="site">
@@ -239,6 +241,7 @@ def render_index(site, topics, ad_html):
 <meta name="description" content="{E(site["tagline"])}. Guias praticos de financas pessoais.">
 <link rel="canonical" href="{E(base)}/">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="alternate" type="application/rss+xml" title="Feed" href="feed.xml">
 </head>
 <body>
 <header class="site">
@@ -285,6 +288,31 @@ def render_sitemap(site, topics):
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}\n</urlset>\n'
 
 
+def render_feed(site, topics):
+    base = site["base_url"].rstrip("/")
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    items = []
+    for t in topics:
+        items.append(
+            f"  <item>\n"
+            f"    <title>{E(t['title'])}</title>\n"
+            f"    <link>{base}/pages/{E(t['slug'])}.html</link>\n"
+            f"    <guid>{base}/pages/{E(t['slug'])}.html</guid>\n"
+            f"    <description>{E(t['description'])}</description>\n"
+            f"  </item>"
+        )
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0">\n<channel>\n'
+        f"  <title>{E(site['name'])}</title>\n"
+        f"  <link>{base}/</link>\n"
+        f"  <description>{E(site['tagline'])}</description>\n"
+        f"  <language>{site['lang']}</language>\n"
+        f"  <lastBuildDate>{now}</lastBuildDate>\n"
+        + "\n".join(items) + "\n</channel>\n</rss>\n"
+    )
+
+
 def render_robots(site):
     base = site["base_url"].rstrip("/")
     return f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n"
@@ -311,6 +339,7 @@ def main():
     (ROOT / "index.html").write_text(render_index(site, topics, ad_html), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(render_sitemap(site, topics), encoding="utf-8")
     (ROOT / "robots.txt").write_text(render_robots(site), encoding="utf-8")
+    (ROOT / "feed.xml").write_text(render_feed(site, topics), encoding="utf-8")
     print(f"Gerado: {len(topics)} paginas + index + sitemap + robots")
 
 

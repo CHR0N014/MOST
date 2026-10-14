@@ -40,3 +40,25 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Avisar buscadores (IndexNow)
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, pathlib, re
+          base = "https://chr0n014.github.io/MOST"
+          key = "f002e8e51d9f0901c3881bf8332b9cd1"
+          urls = [base + "/"]
+          sm = pathlib.Path("sitemap.xml").read_text()
+          urls += re.findall(r"<loc>(.*?)</loc>", sm)
+          body = json.dumps({"host": "chr0n014.github.io",
+                             "key": key,
+                             "keyLocation": f"{base}/{key}.txt",
+                             "urlList": urls}).encode()
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow", data=body,
+              headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              r = urllib.request.urlopen(req, timeout=30)
+              print("IndexNow:", r.status, len(urls), "urls enviadas")
+          except Exception as e:
+              print("IndexNow falhou (nao critico):", e)
+          PY
