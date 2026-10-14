@@ -120,7 +120,7 @@ def render_topic(site, topics, t, ad_html, affiliates):
         schema=schema_for(site, t),
     )]
     out.append('<article>')
-    out.append(f'<div class="tag">{E(t["category"])}</div>')
+    out.append(f'<div class="tag"><a href="../categoria/{slugify(t["category"])}.html">{E(t["category"])}</a></div>')
     out.append(f'<h1>{E(t["title"])}</h1>')
     out.append(f'<p class="muted">Atualizado em <time datetime="{datetime.date.today().isoformat()}">{datetime.date.today().strftime("%d/%m/%Y")}</time></p>')
     out.append(f'<p>{E(t["intro"])}</p>')
@@ -156,8 +156,66 @@ def render_topic(site, topics, t, ad_html, affiliates):
     return "\n".join(out)
 
 
+def slugify(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return s.lower().strip().replace(" ", "-")
+
+
+def render_category(site, cat, topics):
+    base = site["base_url"].rstrip("/")
+    slug = slugify(cat)
+    items = "\n".join(
+        f'    <li><a href="../pages/{E(t["slug"])}.html">{E(t["title"])}</a> &mdash; {E(t["description"])}</li>'
+        for t in topics
+    )
+    return f"""<!DOCTYPE html>
+<html lang="{site["lang"]}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{E(cat)} &mdash; guias | {E(site["name"])}</title>
+<meta name="description" content="Guias de {E(cat)} em financas pessoais. {len(topics)} artigos praticos.">
+<link rel="canonical" href="{E(base)}/categoria/{E(slug)}.html">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">{E(site["name"])}</a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../ferramentas.html">Ferramentas</a>
+      <a href="../sobre.html">Sobre</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="tag">Categoria</div>
+  <h1>{E(cat)}</h1>
+  <p class="muted">{len(topics)} guias sobre {E(cat)}.</p>
+  <ul class="related">
+{items}
+  </ul>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>&copy; {datetime.date.today().year} {E(site["name"])} &mdash; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../privacidade.html">Privacidade</a> &middot; <a href="../termos.html">Termos</a></p>
+  </div>
+</footer>
+</body>
+</html>
+"""
+
+
+
+
 def render_index(site, topics):
     base = site["base_url"].rstrip("/")
+    cats = sorted({t["category"] for t in topics})
+    cats_nav = " &middot; ".join(
+        f'<a href="categoria/{slugify(c)}.html">{E(c)}</a>' for c in cats)
     cards = []
     cards.append(
         '    <div class="card">\n'
@@ -200,6 +258,8 @@ def render_index(site, topics):
   <h1>{E(site["tagline"])}</h1>
   <p class="muted">Guias diretos para organizar o dinheiro, sair de dividas e comecar a investir.</p>
   <div class="ad-slot">{E(read_ads())}</div>
+  <h2>Categorias</h2>
+  <p>{cats_nav}</p>
   <h2>Guias</h2>
   <div class="grid">
 {chr(10).join(cards)}
@@ -221,6 +281,8 @@ def render_sitemap(site, topics):
             f"{base}/privacidade.html", f"{base}/termos.html",
             f"{base}/ferramentas.html", f"{base}/calculadora-juros-compostos.html"]
     urls += [f"{base}/pages/{t['slug']}.html" for t in topics]
+    cats = sorted({t["category"] for t in topics})
+    urls += [f"{base}/categoria/{slugify(c)}.html" for c in cats]
     items = "\n".join(f"  <url><loc>{E(u)}</loc></url>" for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}\n</urlset>\n'
 
@@ -240,6 +302,14 @@ def main():
     for t in topics:
         (OUT / f"{t['slug']}.html").write_text(
             render_topic(site, topics, t, ad_html, affiliates), encoding="utf-8")
+    cats = {}
+    for t in topics:
+        cats.setdefault(t["category"], []).append(t)
+    catdir = ROOT / "categoria"
+    catdir.mkdir(exist_ok=True)
+    for cat, group in cats.items():
+        (catdir / f"{slugify(cat)}.html").write_text(
+            render_category(site, cat, group), encoding="utf-8")
     (ROOT / "index.html").write_text(render_index(site, topics), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(render_sitemap(site, topics), encoding="utf-8")
     (ROOT / "robots.txt").write_text(render_robots(site), encoding="utf-8")
