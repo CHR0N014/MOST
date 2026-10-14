@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de Juros Compostos — Dinheiro Claro</title>
+<meta name="description" content="Simule quanto o seu dinheiro rende com juros compostos. Informe o aporte inicial, o aporte mensal e a taxa. Resultado na hora, no seu navegador.">
+<link rel="canonical" href="https://chr0n014.github.io/MOST/calculadora-juros-compostos.html">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Dinheiro Claro</a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="ferramentas.html">Ferramentas</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Simulador de juros compostos</h1>
+  <p class="muted">Descubra quanto o seu dinheiro pode render ao longo do tempo. Tudo roda no seu navegador: nada e enviado, nada e salvo.</p>
+
+  <div class="tool">
+    <div class="tool-inputs">
+      <label>Aporte inicial (R$)
+        <input id="p" type="number" min="0" step="100" value="1000">
+      </label>
+      <label>Aporte mensal (R$)
+        <input id="m" type="number" min="0" step="50" value="500">
+      </label>
+      <label>Taxa de juros (% ao ano)
+        <input id="r" type="number" min="0" step="0.1" value="10">
+      </label>
+      <label>Prazo (anos)
+        <input id="y" type="number" min="1" step="1" value="10">
+      </label>
+      <button type="button" onclick="calcular()">Calcular</button>
+    </div>
+    <div class="tool-results" aria-live="polite">
+      <div class="result-big">
+        <span class="muted">Valor final estimado</span>
+        <strong id="final">—</strong>
+      </div>
+      <div class="result-row"><span>Total investido</span><strong id="invested">—</strong></div>
+      <div class="result-row"><span>Juros ganhos</span><strong id="interest">—</strong></div>
+      <div class="result-row"><span>Rendimento sobre o investido</span><strong id="pct">—</strong></div>
+      <div class="bar" title="Proporcao entre o que voce investiu e o que os juros geraram">
+        <div class="bar-invested" id="barInv"></div>
+        <div class="bar-interest" id="barInt"></div>
+      </div>
+      <p class="muted small"><span class="dot inv"></span> Investido &nbsp; <span class="dot int"></span> Juros</p>
+    </div>
+  </div>
+
+  <h2>Evolucao ano a ano</h2>
+  <div class="table-wrap">
+    <table id="tabela">
+      <thead><tr><th>Ano</th><th>Investido</th><th>Juros</th><th>Total</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>Como funciona o calculo</h2>
+  <p>Os juros compostos rendem sobre o valor acumulado, nao apenas sobre o que voce investiu. Por isso o crescimento acelera com o tempo: quanto mais cedo comecar, maior o efeito.</p>
+  <p>A taxa anual informada e convertida para uma taxa mensal equivalente. O simulador considera aportes feitos ao fim de cada mes.</p>
+  <p class="muted">Os valores sao estimativas e nao consideram inflacao, impostos ou taxas. Use como referencia, nao como promessa.</p>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>&copy; <span id="ano"></span> Dinheiro Claro &mdash; <a href="index.html">Inicio</a> &middot; <a href="ferramentas.html">Ferramentas</a> &middot; <a href="sobre.html">Sobre</a> &middot; <a href="privacidade.html">Privacidade</a> &middot; <a href="termos.html">Termos</a></p>
+  </div>
+</footer>
+<script>
+document.getElementById('ano').textContent=new Date().getFullYear();
+function brl(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:2});}
+function calcular(){
+  var p=parseFloat(document.getElementById('p').value)||0;
+  var m=parseFloat(document.getElementById('m').value)||0;
+  var r=parseFloat(document.getElementById('r').value)||0;
+  var y=parseInt(document.getElementById('y').value)||1;
+  var i=Math.pow(1+r/100,1/12)-1;
+  var months=y*12, total=p, invested=p;
+  var rows=[];
+  for(var mo=1;mo<=months;mo++){
+    total=total*(1+i)+m;
+    invested+=m;
+    if(mo%12===0){rows.push({ano:mo/12,inv:invested,juros:total-invested,total:total});}
+  }
+  document.getElementById('final').textContent=brl(total);
+  document.getElementById('invested').textContent=brl(invested);
+  var juros=total-invested;
+  document.getElementById('interest').textContent=brl(juros);
+  document.getElementById('pct').textContent=(invested>0?((juros/invested)*100).toFixed(1):'0')+'%';
+  var tot=invested+juros||1;
+  document.getElementById('barInv').style.width=(invested/tot*100)+'%';
+  document.getElementById('barInt').style.width=(juros/tot*100)+'%';
+  var tb=document.querySelector('#tabela tbody');
+  tb.innerHTML=rows.map(function(x){
+    return '<tr><td>'+x.ano+'</td><td>'+brl(x.inv)+'</td><td>'+brl(x.juros)+'</td><td><strong>'+brl(x.total)+'</strong></td></tr>';
+  }).join('');
+}
+calcular();
+</script>
+</body>
+</html>

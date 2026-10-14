@@ -37,7 +37,7 @@ HEAD = """<!DOCTYPE html>
       <a href="../index.html">Inicio</a>
       <a href="../sobre.html">Sobre</a>
       <a href="../contato.html">Contato</a>
-      <a href="../apoie.html">Apoie</a>
+      <a href="../ferramentas.html">Ferramentas</a>
     </nav>
   </div>
 </header>
@@ -60,7 +60,7 @@ AD_BLOCK = """<div class="ad-slot">{ad}</div>"""
 def read_ads():
     if ADS.exists():
         return ADS.read_text(encoding="utf-8").strip()
-    return "Espaco para anuncio (A-ADS - paga em Bitcoin)"
+    return "Publicidade"
 
 
 def render_topic(site, t, ad_html):
@@ -95,6 +95,13 @@ def render_topic(site, t, ad_html):
 def render_index(site, topics):
     base = site["base_url"].rstrip("/")
     cards = []
+    cards.append(
+        '    <div class="card">\n'
+        '      <div class="tag">Ferramenta</div>\n'
+        '      <h3 class="post-title"><a href="calculadora-juros-compostos.html">Simulador de juros compostos</a></h3>\n'
+        '      <p class="muted">Calcule quanto o seu dinheiro rende com aportes mensais. Resultado na hora.</p>\n'
+        '    </div>'
+    )
     for t in topics:
         cards.append(
             f'    <div class="card">\n'
@@ -121,7 +128,7 @@ def render_index(site, topics):
       <a href="index.html">Inicio</a>
       <a href="sobre.html">Sobre</a>
       <a href="contato.html">Contato</a>
-      <a href="apoie.html">Apoie</a>
+      <a href="ferramentas.html">Ferramentas</a>
     </nav>
   </div>
 </header>
@@ -148,7 +155,8 @@ def render_index(site, topics):
 def render_sitemap(site, topics):
     base = site["base_url"].rstrip("/")
     urls = [f"{base}/", f"{base}/sobre.html", f"{base}/contato.html",
-            f"{base}/privacidade.html", f"{base}/termos.html", f"{base}/apoie.html"]
+            f"{base}/privacidade.html", f"{base}/termos.html",
+            f"{base}/ferramentas.html", f"{base}/calculadora-juros-compostos.html"]
     urls += [f"{base}/pages/{t['slug']}.html" for t in topics]
     items = "\n".join(f"  <url><loc>{E(u)}</loc></url>" for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}\n</urlset>\n'
