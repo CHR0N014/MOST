@@ -76,3 +76,8 @@ th,td{padding:11px 14px; text-align:right; border-bottom:1px solid var(--border)
 th:first-child,td:first-child{text-align:left}
 thead th{color:var(--muted); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.4px}
 tbody tr:last-child td{border-bottom:0}
+.related{margin:6px 0 0; padding-left:18px}
+.related li{margin:6px 0}
+.recs{background:var(--card); border:1px solid var(--border); border-radius:12px;
+  padding:18px 22px; margin:26px 0}
+.recs h2{margin-top:0}

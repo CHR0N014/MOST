@@ -1,0 +1,22 @@
+{
+  "_comment": "Copie este arquivo para data/affiliates.json e preencha com os SEUS links de afiliado. A chave e a categoria do artigo (ex: Investimentos, Dividas, Cartao).",
+  "Investimentos": {
+    "title": "Onde investir",
+    "items": [
+      {"label": "Abrir conta em corretora", "url": "https://SEU-LINK-DE-AFILIADO", "note": "comece com renda fixa"},
+      {"label": "Comparar CDBs", "url": "https://SEU-LINK-DE-AFILIADO", "note": "veja taxas e liquidez"}
+    ]
+  },
+  "Cartao": {
+    "title": "Cartoes e credito",
+    "items": [
+      {"label": "Comparar cartoes", "url": "https://SEU-LINK-DE-AFILIADO", "note": "veja anuidade e beneficios"}
+    ]
+  },
+  "Credito": {
+    "title": "Opcoes de credito",
+    "items": [
+      {"label": "Simular emprestimo", "url": "https://SEU-LINK-DE-AFILIADO", "note": "compare o CET"}
+    ]
+  }
+}
