@@ -129,8 +129,6 @@ def render_topic(site, topics, t, ad_html, affiliates):
         out.append(f'<h2>{E(sec["h"])}</h2>')
         for p in sec["p"]:
             out.append(f'<p>{E(p)}</p>')
-        if i == 1:
-            out.append(f'<div class="ad-slot">{ad_html}</div>')
     if t.get("faq"):
         out.append('<h2>Perguntas frequentes</h2>')
         for item in t["faq"]:
