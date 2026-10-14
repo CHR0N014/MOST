@@ -137,12 +137,14 @@ def render_topic(site, topics, t, ad_html, affiliates):
             out.append(f'<p>{E(item["a"])}</p>')
     box = affiliates.get(t["category"])
     if box:
-        out.append('<aside class="recs">')
-        out.append(f'<h2>{E(box["title"])}</h2>')
-        for r in box["items"]:
-            out.append(f'<p><a href="{E(r["url"])}" rel="nofollow sponsored">{E(r["label"])}</a> &mdash; {E(r["note"])}</p>')
-        out.append('<p class="muted small">Alguns links podem gerar comissao. Isso nao altera o preco para voce.</p>')
-        out.append('</aside>')
+        items = [r for r in box.get("items", []) if r.get("url") and r["url"] != "#"]
+        if items:
+            out.append('<aside class="recs">')
+            out.append(f'<h2>{E(box["title"])}</h2>')
+            for r in items:
+                out.append(f'<p><a href="{E(r["url"])}" rel="nofollow sponsored">{E(r["label"])}</a> &mdash; {E(r["note"])}</p>')
+            out.append('<p class="muted small">Alguns links podem gerar comissao. Isso nao altera o preco para voce.</p>')
+            out.append('</aside>')
     rel = related_for(topics, t)
     if rel:
         out.append('<h2>Leia tambem</h2>')

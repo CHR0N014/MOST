@@ -1,0 +1,10 @@
+{
+  "_comment": "Substitua os valores de 'url' pelos SEUS links de afiliado. ChangeNOW e Godex aceitam cadastro so com e-mail (sem KYC). Enquanto a url for '#', o bloco nao aparece no site.",
+  "Investimentos": {
+    "title": "Ferramentas para investir",
+    "items": [
+      {"label": "Trocar moedas digitais sem cadastro", "url": "#", "note": "ChangeNOW - sem KYC"},
+      {"label": "Comparar taxas de troca", "url": "#", "note": "Godex - anonimo"}
+    ]
+  }
+}
