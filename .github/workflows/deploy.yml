@@ -41,14 +41,14 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Avisar buscadores (IndexNow)
+        continue-on-error: true
         run: |
           python3 - <<'PY'
-          import json, urllib.request, pathlib, re
+          import json, urllib.request, re
           base = "https://chr0n014.github.io/MOST"
           key = "f002e8e51d9f0901c3881bf8332b9cd1"
-          urls = [base + "/"]
-          sm = pathlib.Path("sitemap.xml").read_text()
-          urls += re.findall(r"<loc>(.*?)</loc>", sm)
+          sm = urllib.request.urlopen(f"{base}/sitemap.xml", timeout=30).read().decode()
+          urls = [base + "/"] + re.findall(r"<loc>(.*?)</loc>", sm)
           body = json.dumps({"host": "chr0n014.github.io",
                              "key": key,
                              "keyLocation": f"{base}/{key}.txt",
