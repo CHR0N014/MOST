@@ -27,10 +27,18 @@ HEAD = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="{base}/{slug}.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="{site}">
+<link rel="canonical" href="{base}/pages/{slug}.html">
 <meta property="og:type" content="article">
+<meta property="og:site_name" content="{site}">
+<meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
+<meta property="og:url" content="{base}/pages/{slug}.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="alternate" type="application/rss+xml" title="Feed" href="../feed.xml">
 <script type="application/ld+json">{schema}</script>
@@ -83,6 +91,7 @@ def load_topics():
 
 def schema_for(site, t):
     base = site["base_url"].rstrip("/")
+    today = datetime.date.today().isoformat()
     graph = {
         "@context": "https://schema.org",
         "@graph": [
@@ -91,8 +100,22 @@ def schema_for(site, t):
                 "headline": t["title"],
                 "description": t["description"],
                 "inLanguage": site["lang"],
+                "datePublished": today,
+                "dateModified": today,
+                "author": {"@type": "Organization", "name": site["name"]},
+                "publisher": {"@type": "Organization", "name": site["name"]},
                 "mainEntityOfPage": f"{base}/pages/{t['slug']}.html",
-            }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Inicio",
+                     "item": f"{base}/"},
+                    {"@type": "ListItem", "position": 2, "name": t["category"],
+                     "item": f"{base}/categoria/{slugify(t['category'])}.html"},
+                    {"@type": "ListItem", "position": 3, "name": t["title"]},
+                ],
+            },
         ],
     }
     if t.get("faq"):
