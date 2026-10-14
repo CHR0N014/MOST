@@ -1,0 +1,388 @@
+{
+  "site": {
+    "name": "Dinheiro Claro",
+    "tagline": "Financas pessoais explicadas de forma simples",
+    "base_url": "https://chr0n014.github.io/MOST",
+    "lang": "pt-BR"
+  },
+  "topics": [
+    {
+      "slug": "como-sair-do-cheque-especial",
+      "title": "Como sair do cheque especial sem entrar em divida maior",
+      "keyword": "sair do cheque especial",
+      "category": "Dividas",
+      "description": "Passo a passo para sair do cheque especial trocando por divida mais barata e reorganizando o orcamento.",
+      "intro": "O cheque especial e uma das linhas de credito mais caras do mercado. Ficar preso nele faz os juros consumirem qualquer renda extra. A saida nao e pagar mais rapido por forca, e trocar a divida cara por uma barata e ajustar o orcamento.",
+      "sections": [
+        {"h": "Entenda o tamanho real da divida", "p": ["Some o valor usado no cheque especial e simule quanto ele cresce em 30 dias com os juros atuais.", "Quanto mais tempo passa sem tratamento, mais o juro composto trabalha contra voce."]},
+        {"h": "Troque por uma divida mais barata", "p": ["Procure credito com juros menores, como consignado ou emprestimo pessoal com garantia.", "O objetivo e substituir uma divida carissima por uma que caiba no orcamento."]},
+        {"h": "Reorganize o orcamento do mes", "p": ["Liste a renda liquida e os gastos essenciais. Veja quanto sobra para pagar a divida.", "Corte primeiro os gastos superfluos, mantendo moradia, alimentacao e transporte."]},
+        {"h": "Evite voltar ao limite", "p": ["Depois de quitar, o habito de usar o limite precisa ser substituido por uma reserva pequena.", "Guardar mesmo pouco todo mes cria um colchao que evita o retorno ao cheque especial."]}
+      ],
+      "faq": [
+        {"q": "Vale usar a reserva para quitar o cheque especial?", "a": "Em geral sim, porque o juro do cheque especial costuma ser maior que o rendimento da reserva. Mantenha um minimo para imprevistos."},
+        {"q": "Posso negociar direto com o banco?", "a": "Sim. Bancos costumam oferecer parcelamento. Compare a taxa oferecida com outras opcoes antes de aceitar."}
+      ]
+    },
+    {
+      "slug": "como-montar-reserva-de-emergencia",
+      "title": "Como montar uma reserva de emergencia do zero",
+      "keyword": "reserva de emergencia",
+      "category": "Reserva",
+      "description": "Quanto guardar, onde deixar e como comecar a reserva de emergencia mesmo com renda apertada.",
+      "intro": "Reserva de emergencia e o dinheiro que protege voce de imprevistos sem precisar de divida. Antes de investir em qualquer coisa, ela vem primeiro.",
+      "sections": [
+        {"h": "Quanto voce precisa guardar", "p": ["A referencia comum e de tres a seis meses de gastos essenciais.", "Quem tem renda estavel pode mirar em tres meses. Quem tem renda variavel deve mirar em seis ou mais."]},
+        {"h": "Onde deixar o dinheiro", "p": ["A reserva precisa de liquidez: saque facil e imediato.", "Opcoes como tesouro selic ou CDB com liquidez diaria costumam servir. O foco e seguranca, nao rentabilidade."]},
+        {"h": "Como comecar com pouco", "p": ["Comece com uma meta pequena, como mil reais, e aumente depois.", "Defina um valor fixo para guardar todo mes, mesmo que seja pouco."]},
+        {"h": "Erros comuns", "p": ["Usar a reserva para consumo, e nao para emergencia, e o erro mais frequente.", "Outro erro e deixar o dinheiro parado na conta corrente, onde e gasto sem perceber."]}
+      ],
+      "faq": [
+        {"q": "Reserva de emergencia e investimento?", "a": "Nao exatamente. Ela e protecao. O objetivo e estar disponivel quando necessario, nao render muito."},
+        {"q": "Quitar dividas ou montar reserva primeiro?", "a": "Se a divida tem juros muito altos, quitar primeiro costuma valer mais. Mantenha uma reserva minima."}
+      ]
+    },
+    {
+      "slug": "como-organizar-orcamento-familiar",
+      "title": "Como organizar o orcamento familiar em uma planilha simples",
+      "keyword": "orcamento familiar",
+      "category": "Orcamento",
+      "description": "Metodo pratico para organizar o orcamento da familia, separar gastos e sobrar dinheiro todo mes.",
+      "intro": "Orcamento familiar nao precisa de app caro. Precisa de clareza sobre o que entra, o que sai e o que sobra. Uma planilha simples resolve a maior parte.",
+      "sections": [
+        {"h": "Levante toda a renda", "p": ["Some a renda liquida de todos os membros. Use o valor que cai na conta, nao o bruto.", "Inclua rendas extras, como freelances e alugueis."]},
+        {"h": "Classifique os gastos em tres grupos", "p": ["Essenciais: moradia, contas, alimentacao, transporte. Importantes: saude e educacao. Superfluos: assinaturas, delivery, lazer.", "Essa divisao mostra onde cortar sem sacrificar o necessario."]},
+        {"h": "Defina metas por categoria", "p": ["Estabeleca um teto para cada grupo. A referencia 50-30-20 ajuda.", "Nao precisa ser exato. Serve como bussola."]},
+        {"h": "Revise toda semana", "p": ["Dez minutos por semana bastam para conferir se os gastos seguem o plano.", "Quem revisa com frequencia corrige o rumo antes do fim do mes."]}
+      ],
+      "faq": [
+        {"q": "Preciso de um aplicativo pago?", "a": "Nao. Uma planilha gratuita ou ate um caderno funcionam. O importante e registrar e revisar."},
+        {"q": "E se a renda for muito variavel?", "a": "Use a media dos ultimos meses como base e ajuste nos meses melhores e piores."}
+      ]
+    },
+    {
+      "slug": "como-investir-pouco-dinheiro",
+      "title": "Como investir com pouco dinheiro por mes",
+      "keyword": "investir com pouco dinheiro",
+      "category": "Investimentos",
+      "description": "Como comecar a investir mesmo com valores pequenos, com foco em constancia e seguranca.",
+      "intro": "Investir nao exige grandes somas. Exige constancia. Comecar com pouco e mais eficaz do que esperar ter muito.",
+      "sections": [
+        {"h": "Antes de investir, organize a base", "p": ["Quite dividas caras e monte uma reserva de emergencia antes de buscar rentabilidade.", "Sem essa base, um imprevisto obriga a resgatar investimentos na pior hora."]},
+        {"h": "Comece por opcoes simples", "p": ["Renda fixa de baixo risco, como tesouro e CDBs, e um ponto de partida comum.", "O foco inicial e criar o habito, nao acertar a melhor aplicacao."]},
+        {"h": "Invista todo mes, sem falhar", "p": ["Aportes pequenos e regulares aproveitam o tempo a favor.", "Defina uma data fixa para investir, logo apos receber."]},
+        {"h": "Diversifique com o tempo", "p": ["Conforme aprende, voce pode dividir entre renda fixa e renda variavel.", "Diversificar reduz o risco de depender de um unico ativo."]}
+      ],
+      "faq": [
+        {"q": "Da para investir com dez reais por mes?", "a": "Sim. Muitas aplicacoes de renda fixa comecam com valores baixos. O habito vale mais que o valor inicial."},
+        {"q": "Renda variavel e para iniciante?", "a": "Pode entrar, mas com parcela pequena e entendendo o risco. Nunca invista o que nao pode perder."}
+      ]
+    },
+    {
+      "slug": "como-negociar-dividas",
+      "title": "Como negociar dividas e pagar menos",
+      "keyword": "negociar dividas",
+      "category": "Dividas",
+      "description": "Estrategias para negociar dividas em atraso, conseguir desconto e organizar o pagamento.",
+      "intro": "Divida em atraso costuma ter desconto para quem negocia. O segredo e se preparar antes de falar com o credor e saber o que voce pode pagar.",
+      "sections": [
+        {"h": "Saiba exatamente quanto deve", "p": ["Consulte o valor atualizado de cada divida e a origem.", "Dividas antigas podem estar com juros abusivos, passiveis de revisao."]},
+        {"h": "Defina o que voce pode pagar", "p": ["Estabeleca o maximo de parcela que cabe no orcamento sem voltar ao vermelho.", "Negociar acima da capacidade leva ao calote de novo."]},
+        {"h": "Peca desconto e pague a vista se puder", "p": ["Credores costumam dar descontos maiores para pagamento a vista.", "Se nao puder, negocie parcela que caiba e peca a retirada dos juros."]},
+        {"h": "Ponha o acordo por escrito", "p": ["Guarde o comprovante e o detalhamento do acordo.", "Confirme que seu nome sai dos cadastros de inadimplentes apos a quitacao."]}
+      ],
+      "faq": [
+        {"q": "Ligar para o credor ajuda?", "a": "Sim. Muitos descontos aparecem quando o devedor demonstra intencao de pagar."},
+        {"q": "Devo usar o FGTS para quitar divida?", "a": "Depende. Se a divida tem juros altos e o FGTS nao faz falta agora, pode valer. Avalie caso a caso."}
+      ]
+    },
+    {
+      "slug": "como-economizar-no-mercado",
+      "title": "Como economizar no mercado sem perder qualidade",
+      "keyword": "economizar no mercado",
+      "category": "Economia",
+      "description": "Taticas para reduzir a conta do mercado mantendo uma alimentacao de qualidade.",
+      "intro": "O mercado e um dos gastos que mais escapam do controle. Com alguns ajustes simples, da para reduzir a conta sem abrir mao da qualidade.",
+      "sections": [
+        {"h": "Faca lista e va com o estomago cheio", "p": ["Comprar sem lista aumenta o gasto por impulso.", "Ir com fome faz voce comprar mais do que precisa."]},
+        {"h": "Compare preco por quilo ou litro", "p": ["O preco por unidade engana. Compare o custo por quilo ou litro.", "Marcas proprias de mercado costumam custar menos com qualidade parecida."]},
+        {"h": "Planeje as refeicoes da semana", "p": ["Definir o menu da semana reduz desperdicio e compras por impulso.", "Aproveitar sobras em novas receitas diminui o descarte."]},
+        {"h": "Evite compras pequenas e frequentes", "p": ["Ir ao mercado varias vezes por semana aumenta o gasto total.", "Concentre as compras e use o que ja tem em casa antes de repor."]}
+      ],
+      "faq": [
+        {"q": "Vale comprar em atacado?", "a": "Para itens nao pereciveis e de uso frequente, sim. Para pereciveis, so se houver consumo antes de estragar."},
+        {"q": "Aplicativo de cashback ajuda?", "a": "Pode ajudar, mas so se voce ja ia comprar aquilo. Nunca compre algo so para ganhar cashback."}
+      ]
+    },
+    {
+      "slug": "como-sair-do-vermelho",
+      "title": "Como sair do vermelho em tres meses",
+      "keyword": "sair do vermelho",
+      "category": "Dividas",
+      "description": "Plano de tres meses para equilibrar as contas, parar de gastar mais do que ganha e comecar a sobrar.",
+      "intro": "Sair do vermelho e um processo, nao um golpe de sorte. Em tres meses da para equilibrar as contas se houver metodo e disciplina.",
+      "sections": [
+        {"h": "Mes 1: diagnostico", "p": ["Registre todos os gastos por 30 dias, sem julgar.", "Ao fim do mes, veja onde o dinheiro realmente vai e quais gastos sao superfluos."]},
+        {"h": "Mes 2: corte e renegocie", "p": ["Corte assinaturas e gastos por impulso. Renegocie contas fixas e dividas.", "Defina teto para cada categoria de gasto."]},
+        {"h": "Mes 3: crie a sobra", "p": ["Com os gastos controlados, direcione a sobra para a divida mais cara ou para a reserva.", "Automatize a guarda do dinheiro logo apos receber."]},
+        {"h": "Mantenha o habito", "p": ["O risco e voltar ao padrao antigo depois do aperto.", "Continue revisando semanalmente para nao perder o controle."]}
+      ],
+      "faq": [
+        {"q": "Da para sair do vermelho ganhando pouco?", "a": "Sim, mas exige cortar gastos e, se possivel, aumentar a renda. O ajuste e proporcional ao tamanho do buraco."},
+        {"q": "Por onde comeco?", "a": "Pelo diagnostico. Sem saber para onde o dinheiro vai, qualquer corte e chute."}
+      ]
+    },
+    {
+      "slug": "como-aumentar-a-renda-extra",
+      "title": "Ideias de renda extra que realmente funcionam",
+      "keyword": "renda extra",
+      "category": "Renda",
+      "description": "Opcoes realistas de renda extra compativeis com quem tem pouco tempo e quer resultados concretos.",
+      "intro": "Renda extra ajuda a acelerar a saida de dividas e a formacao da reserva. O melhor caminho e usar uma habilidade que voce ja tem.",
+      "sections": [
+        {"h": "Use o que voce ja sabe", "p": ["Ensinar, escrever, traduzir, organizar dados ou prestar servicos locais sao pontos de partida.", "Vender uma habilidade existente rende mais rapido do que aprender algo do zero."]},
+        {"h": "Comece pequeno e valide", "p": ["Teste uma ideia com pouco investimento antes de escalar.", "Se der certo, dobre o esforco. Se nao, troque rapido."]},
+        {"h": "Separe o dinheiro da renda extra", "p": ["Direcione a renda extra para um objetivo especifico, como quitar divida ou montar reserva.", "Sem destino claro, a renda extra some no consumo."]},
+        {"h": "Cuidado com promessas faceis", "p": ["Desconfie de esquemas que prometem retorno alto e garantido.", "Renda extra honesta exige trabalho ou capital."]}
+      ],
+      "faq": [
+        {"q": "Qual renda extra da dinheiro mais rapido?", "a": "Prestar um servico com uma habilidade que voce ja domina costuma ser o caminho mais rapido."},
+        {"q": "Renda extra pode virar renda principal?", "a": "Pode, se for consistente e escalavel. Muitos comecam como extra e depois fazem a transicao."}
+      ]
+    },
+    {
+      "slug": "como-ensinar-educacao-financeira-aos-filhos",
+      "title": "Como ensinar educacao financeira para os filhos",
+      "keyword": "educacao financeira para filhos",
+      "category": "Familia",
+      "description": "Formas simples de ensinar criancas e adolescentes a lidar com dinheiro desde cedo.",
+      "intro": "Educacao financeira se aprende em casa, com exemplos praticos. Criancas que entendem dinheiro cedo tendem a lidar melhor com ele na vida adulta.",
+      "sections": [
+        {"h": "Comece pelo exemplo", "p": ["Filhos aprendem observando. Ver os pais planejarem e economizar ensina mais que qualquer discurso.", "Envolva a crianca em decisoes simples de compra."]},
+        {"h": "Use mesada com proposito", "p": ["Mesada ajuda a criar nocao de escolha e limite.", "Defina junto o que fazer com o dinheiro: gastar, guardar e, se quiser, doar."]},
+        {"h": "Ensine a esperar", "p": ["Aprender a juntar para um objetivo desenvolve paciencia e planejamento.", "Ajude a criar metas pequenas e acompanhe o progresso."]},
+        {"h": "Fale de dinheiro abertamente", "p": ["Conversar sobre limites e prioridades reduz o misterio em torno do dinheiro.", "Nao precisa expor problemas financeiros, mas explique escolhas."]}
+      ],
+      "faq": [
+        {"q": "Qual idade para comecar?", "a": "Desde os primeiros anos, com conceitos simples, e aprofundando conforme cresce."},
+        {"q": "Mesada deve ser obrigatoria?", "a": "Nao existe regra unica. O importante e que ela sirva de ferramenta de aprendizado."}
+      ]
+    },
+    {
+      "slug": "como-escolher-cdb",
+      "title": "Como escolher um CDB para comecar a investir",
+      "keyword": "escolher CDB",
+      "category": "Investimentos",
+      "description": "O que observar ao escolher um CDB: liquidez, risco do banco e o papel do FGC.",
+      "intro": "O CDB e um dos investimentos de renda fixa mais comuns. Saber comparar as opcoes evita escolher mal.",
+      "sections": [
+        {"h": "Veja a liquidez", "p": ["Liquidez diaria permite sacar quando quiser. No vencimento, o dinheiro fica preso ate a data.", "Para reserva de emergencia, prefira liquidez diaria."]},
+        {"h": "Compare a taxa", "p": ["CDBs pagam um percentual do CDI ou uma taxa prefixada.", "Compare sempre o rendimento liquido, depois de impostos e taxas."]},
+        {"h": "Considere o risco do emissor", "p": ["Quem emite o CDB e um banco. O FGC cobre ate um limite por CPF e por instituicao.", "Espalhar o dinheiro entre emissores respeitando o limite reduz o risco."]},
+        {"h": "Pense no prazo", "p": ["Prazos mais longos costumam pagar mais, mas prendem o dinheiro.", "Alinhe o prazo ao seu objetivo, nao so a taxa."]}
+      ],
+      "faq": [
+        {"q": "CDB e seguro?", "a": "Tem a cobertura do FGC dentro dos limites. Ainda assim, diversifique entre emissores."},
+        {"q": "CDB rende mais que a poupanca?", "a": "Em geral sim, especialmente em prazos mais longos e com boa taxa."}
+      ]
+    },
+    {
+      "slug": "como-planejar-viagem-economica",
+      "title": "Como planejar uma viagem economica sem divida",
+      "keyword": "planejar viagem economica",
+      "category": "Economia",
+      "description": "Como planejar e pagar uma viagem sem comprometer o orcamento nem entrar em divida.",
+      "intro": "Viajar sem se endividar depende de planejamento. Com antecedencia e um objetivo claro, a viagem cabe no orcamento.",
+      "sections": [
+        {"h": "Defina o destino e o custo total", "p": ["Some transporte, hospedagem, alimentacao e passeios antes de decidir.", "Ter o custo total evita surpresas no meio da viagem."]},
+        {"h": "Crie uma meta de poupanca", "p": ["Divida o custo total pelos meses ate a viagem e guarde esse valor todo mes.", "Separar o dinheiro em uma conta propria evita gastar antes."]},
+        {"h": "Reserve com antecedencia", "p": ["Passagens e hospedagem costumam ficar mais caras perto da data.", "Comprar antes e uma das maiores economias possiveis."]},
+        {"h": "Evite parcelar no cartao sem necessidade", "p": ["Parcelar vira divida se a parcela nao couber no mes.", "Se nao juntou o suficiente, reduza o escopo da viagem."]}
+      ],
+      "faq": [
+        {"q": "Vale comprar passagem parcelada?", "a": "So se a parcela couber no orcamento sem comprometer o essencial. Caso contrario, adie a viagem."},
+        {"q": "Como economizar na hospedagem?", "a": "Reservar cedo, comparar opcoes e escolher locais um pouco fora do centro costuma ajudar."}
+      ]
+    },
+    {
+      "slug": "como-declarar-imposto-de-renda-simples",
+      "title": "Imposto de renda: o que organizar antes de declarar",
+      "keyword": "declarar imposto de renda",
+      "category": "Impostos",
+      "description": "Checklist do que separar antes de declarar o imposto de renda e como evitar erros comuns.",
+      "intro": "A declaracao do imposto de renda fica simples quando os documentos estao organizados. Separar tudo com antecedencia evita correria e erros.",
+      "sections": [
+        {"h": "Reuna os informes de rendimento", "p": ["Junte os informes de salario, rendimentos de investimentos e outras fontes.", "Confira se os valores batem com os registros do ano."]},
+        {"h": "Liste despesas dedutiveis", "p": ["Despesas medicas e educacionais podem ser dedutiveis dentro dos limites.", "Guarde comprovantes de tudo que pretende deduzir."]},
+        {"h": "Confira bens e direitos", "p": ["Atualize saldos de contas, investimentos e bens.", "Divergencias entre anos podem gerar malha fina."]},
+        {"h": "Nao deixe para o ultimo dia", "p": ["Fazer com calma reduz a chance de erro.", "Quem declara cedo e recebe restituicao costuma receber antes."]}
+      ],
+      "faq": [
+        {"q": "Preciso declarar investimentos pequenos?", "a": "Depende das regras do ano e dos valores. Consulte as normas vigentes ou um contador."},
+        {"q": "Errei a declaracao, e agora?", "a": "E possivel retificar a declaracao. Corrija assim que perceber o erro."}
+      ]
+    },
+    {
+      "slug": "como-usar-cartao-de-credito-com-consciencia",
+      "title": "Como usar o cartao de credito sem se endividar",
+      "keyword": "usar cartao de credito",
+      "category": "Cartao",
+      "description": "Regras praticas para usar o cartao de credito a favor do orcamento e nao contra ele.",
+      "intro": "O cartao de credito nao e vilao nem mocinho. Usado com regra, ajuda. Usado sem controle, vira divida carissima.",
+      "sections": [
+        {"h": "Trate o cartao como dinheiro", "p": ["So gaste no cartao o que voce ja tem para pagar.", "Some as compras do mes como se fossem debito."]},
+        {"h": "Pague sempre o total da fatura", "p": ["Pagar o minimo faz o juro rotativo consumir sua renda.", "Se nao consegue pagar o total, o gasto foi maior que a capacidade."]},
+        {"h": "Evite parcelar por impulso", "p": ["Parcelamento esconde o custo total da compra.", "Antes de parcelar, veja se cabe nas faturas futuras sem aperto."]},
+        {"h": "Use os beneficios com criterio", "p": ["Pontos e cashback so valem se a compra ja era necessaria.", "Nunca compre algo so para acumular pontos."]}
+      ],
+      "faq": [
+        {"q": "Cartao de credito e melhor que debito?", "a": "Para quem controla o orcamento, pode oferecer beneficios. Para quem gasta por impulso, o debito e mais seguro."},
+        {"q": "Vale ter mais de um cartao?", "a": "So se houver controle. Muitos cartoes facilitam gastar mais do que se pode."}
+      ]
+    },
+    {
+      "slug": "como-aposentar-com-pouco",
+      "title": "Como comecar a pensar na aposentadoria com pouco",
+      "keyword": "aposentadoria",
+      "category": "Investimentos",
+      "description": "Como dar os primeiros passos para a aposentadoria mesmo com renda limitada.",
+      "intro": "Aposentadoria parece distante, mas o tempo e o maior aliado de quem comeca cedo. Mesmo aportes pequenos fazem diferenca no longo prazo.",
+      "sections": [
+        {"h": "Entenda as opcoes", "p": ["Existem a previdencia publica, a privada e investimentos proprios.", "Cada uma tem regras e custos diferentes."]},
+        {"h": "Comece cedo, mesmo com pouco", "p": ["O juro composto premia quem comeca antes.", "Aportes pequenos e regulares superam aportes grandes e tardios."]},
+        {"h": "Cuidado com taxas", "p": ["Taxas de administracao e carregamento consomem o rendimento ao longo do tempo.", "Compare produtos antes de contratar."]},
+        {"h": "Ajuste ao seu perfil", "p": ["Quanto maior o prazo, mais risco voce pode tolerar na juventude.", "Conforme se aproxima da aposentadoria, reduza o risco."]}
+      ],
+      "faq": [
+        {"q": "Previdencia privada vale a pena?", "a": "Pode valer, mas depende das taxas e do seu objetivo. Compare com investimentos proprios."},
+        {"q": "Com que idade comecar?", "a": "Quanto antes, melhor. Mas nunca e tarde para iniciar."}
+      ]
+    },
+    {
+      "slug": "como-diversificar-investimentos",
+      "title": "Como diversificar investimentos de forma simples",
+      "keyword": "diversificar investimentos",
+      "category": "Investimentos",
+      "description": "O que significa diversificar, por que reduz risco e como fazer isso sem complicar.",
+      "intro": "Diversificar e nao colocar todos os ovos na mesma cesta. Reduz o risco de um unico ativo derrubar todo o seu dinheiro.",
+      "sections": [
+        {"h": "Diversificar nao e ter muitos produtos", "p": ["Ter varios investimentos parecidos nao diversifica de verdade.", "O ideal e combinar classes com comportamentos diferentes."]},
+        {"h": "Combine renda fixa e variavel", "p": ["Renda fixa traz estabilidade. Renda variavel busca retorno maior, com mais risco.", "A proporcao depende do seu perfil e objetivo."]},
+        {"h": "Espalhe o risco de credito", "p": ["Nao concentre tudo em um unico emissor.", "Respeite limites de garantia, como os do FGC."]},
+        {"h": "Revise com o tempo", "p": ["Sua carteira muda de proporcao conforme o mercado se move.", "Rebalancear de tempos em tempos mantem o plano."]}
+      ],
+      "faq": [
+        {"q": "Diversificar reduz o retorno?", "a": "Pode reduzir o pico de ganho, mas tambem reduz o risco. O foco e consistencia."},
+        {"q": "Quantos ativos preciso ter?", "a": "Nao existe numero magico. O importante e cobrir classes diferentes sem se perder."}
+      ]
+    },
+    {
+      "slug": "como-reduzir-contas-de-casa",
+      "title": "Como reduzir as contas de casa todo mes",
+      "keyword": "reduzir contas de casa",
+      "category": "Economia",
+      "description": "Ajustes praticos para diminuir luz, agua, internet e outras contas fixas da casa.",
+      "intro": "As contas fixas pesam todo mes. Pequenos ajustes em cada uma somam uma economia relevante no fim do ano.",
+      "sections": [
+        {"h": "Revise os planos contratados", "p": ["Internet, telefone e streaming costumam ter planos mais baratos equivalentes.", "Ligue e peca uma revisao do contrato ou ameace trocar."]},
+        {"h": "Reduza o consumo de energia", "p": ["Trocar lampadas e desligar aparelhos em espera reduz a conta.", "Aparelhos antigos consomem mais; considere substituir os que pesam na conta."]},
+        {"h": "Controle a agua", "p": ["Consertos de vazamento e banhos mais curtos reduzem o consumo.", "Verifique a conta todo mes para detectar aumentos estranhos."]},
+        {"h": "Cancele o que nao usa", "p": ["Assinaturas esquecidas sao um vazamento silencioso de dinheiro.", "Faca uma lista de tudo que paga e cancele o que nao usa."]}
+      ],
+      "faq": [
+        {"q": "Vale trocar de operadora?", "a": "Muitas vezes sim. Compare promocoes e considere portabilidade."},
+        {"q": "Painel solar compensa?", "a": "Depende do consumo e do custo de instalacao. Faca a conta do retorno antes de investir."}
+      ]
+    },
+    {
+      "slug": "como-planejar-compras-grandes",
+      "title": "Como planejar compras grandes sem parcelar tudo",
+      "keyword": "planejar compras grandes",
+      "category": "Orcamento",
+      "description": "Como se preparar para compras grandes juntando antes e evitando dividas desnecessarias.",
+      "intro": "Compras grandes assustam quando viram parcelas que se acumulam. Com planejamento, elas cabem no orcamento sem sufoco.",
+      "sections": [
+        {"h": "Antecipe a decisao", "p": ["Quanto antes decidir, mais tempo para juntar.", "Comprar por impulso e o que leva ao parcelamento excessivo."]},
+        {"h": "Defina o valor e o prazo", "p": ["Divida o valor pelo numero de meses que voce pode esperar.", "Guardar mensalmente evita juros e desconto no futuro."]},
+        {"h": "Compare a vista e parcelado", "p": ["Calcule o custo total de cada opcao, nao so a parcela.", "Pagar a vista costuma render desconto ou evitar juros."]},
+        {"h": "Reserve antes de comprar", "p": ["So compre quando o valor estiver juntado.", "Isso evita comprometer a renda dos meses seguintes."]}
+      ],
+      "faq": [
+        {"q": "Parcelar sem juros e ruim?", "a": "Nao e ruim por si, mas compromete renda futura. So parcele se a parcela couber com folga."},
+        {"q": "Vale esperar uma promocao?", "a": "Se voce ja juntou o dinheiro, sim. Promocoes costumam ser maiores em datas especificas."}
+      ]
+    },
+    {
+      "slug": "como-ensinar-a-guardar-dinheiro",
+      "title": "Como criar o habito de guardar dinheiro todo mes",
+      "keyword": "guardar dinheiro",
+      "category": "Reserva",
+      "description": "Tecnicas de comportamento para transformar o ato de guardar dinheiro em habito automatico.",
+      "intro": "Guardar dinheiro e menos sobre quanto voce ganha e mais sobre habito. Quem automatiza a guarda poupa sem depender de forca de vontade.",
+      "sections": [
+        {"h": "Pague-se primeiro", "p": ["Separe o valor da poupanca assim que receber, antes de gastar.", "Se esperar o que sobrar, normalmente nao sobra nada."]},
+        {"h": "Automatize a transferencia", "p": ["Programe uma transferencia automatica para uma conta separada.", "Nao depender da decisao diaria e o que sustenta o habito."]},
+        {"h": "Comece com pouco", "p": ["Um valor pequeno e constante vale mais que um grande e irregular.", "Aumente a medida que a renda crescer."]},
+        {"h": "De um nome ao objetivo", "p": ["Dinheiro guardado com destino claro e menos gasto.", "Reserva, viagem ou aposentadoria: nomeie e acompanhe."]}
+      ],
+      "faq": [
+        {"q": "E se eu ganhar pouco?", "a": "Guarde uma porcentagem pequena, mesmo que simbolica. O habito e o que importa no inicio."},
+        {"q": "Onde guardar para nao gastar?", "a": "Em uma conta separada, de preferencia com resgate nao imediato, para dificultar o gasto por impulso."}
+      ]
+    },
+    {
+      "slug": "como-comparar-emprestimos",
+      "title": "Como comparar emprestimos antes de contratar",
+      "keyword": "comparar emprestimos",
+      "category": "Credito",
+      "description": "O que olhar ao comparar emprestimos: CET, prazo, garantias e o custo total.",
+      "intro": "Todo emprestimo tem um custo. Comparar apenas a parcela engana. O numero que importa e o custo total.",
+      "sections": [
+        {"h": "Olhe o CET, nao so a taxa", "p": ["O Custo Efetivo Total inclui juros, tarifas e impostos.", "E o CET que mostra o custo real da operacao."]},
+        {"h": "Compare o prazo", "p": ["Prazos mais longos reduzem a parcela, mas aumentam o total pago.", "Escolha o prazo pelo que cabe no orcamento, nao pela parcela menor."]},
+        {"h": "Verifique garantias", "p": ["Emprestimos com garantia costumam ter juros menores, mas colocam um bem em risco.", "Avalie se o risco compensa a economia."]},
+        {"h": "Leia as condicoes", "p": ["Cheque tarifas, seguro embutido e penalidades por atraso.", "Contrate so o que entende."]}
+      ],
+      "faq": [
+        {"q": "Consignado e sempre melhor?", "a": "Costuma ter juros menores por ter desconto em folha, mas depende do seu caso e das taxas."},
+        {"q": "Emprestimo com garantia vale a pena?", "a": "Pode valer pela taxa menor, mas so se voce tiver certeza de que consegue pagar."}
+      ]
+    },
+    {
+      "slug": "como-usar-o-decimo-terceiro",
+      "title": "Como usar o decimo terceiro salario com sabedoria",
+      "keyword": "decimo terceiro",
+      "category": "Orcamento",
+      "description": "Prioridades para usar o 13o salario: quitar divida, formar reserva e realizar objetivos.",
+      "intro": "O decimo terceiro e uma renda extra previsivel. Usar bem esse dinheiro pode mudar a situacao financeira do ano seguinte.",
+      "sections": [
+        {"h": "Quite dividas caras primeiro", "p": ["Dividas com juros altos, como cartao e cheque especial, devem vir primeiro.", "Quitar antes libera renda futura."]},
+        {"h": "Reforce a reserva de emergencia", "p": ["Se nao ha divida cara, use parte para a reserva.", "A reserva evita novas dividas em imprevistos."]},
+        {"h": "Reserve parte para objetivos", "p": ["Separe um valor para metas, como viagem ou compra planejada.", "Assim o 13o nao some no consumo por impulso."]},
+        {"h": "Evite gastar tudo de uma vez", "p": ["Decidir antes de receber evita o consumo por impulso.", "Planeje os destinos antes do dinheiro cair na conta."]}
+      ],
+      "faq": [
+        {"q": "Vale antecipar o 13o?", "a": "Antecipar costuma ter juros embutidos. So vale se a necessidade for urgente e a taxa for baixa."},
+        {"q": "Devo investir o 13o?", "a": "Se as dividas caras estao quitadas e a reserva formada, investir e uma boa opcao."}
+      ]
+    },
+    {
+      "slug": "como-alcancar-independencia-financeira",
+      "title": "Primeiros passos para a independencia financeira",
+      "keyword": "independencia financeira",
+      "category": "Investimentos",
+      "description": "O que significa independencia financeira e como dar os primeiros passos de forma realista.",
+      "intro": "Independencia financeira nao e parar de trabalhar amanha. E ter patrimonio suficiente para que a renda dele cubra seus gastos.",
+      "sections": [
+        {"h": "Entenda o conceito", "p": ["Independencia acontece quando a renda dos seus ativos cobre os gastos.", "O caminho e aumentar a renda dos ativos e reduzir o consumo."]},
+        {"h": "Aumente a taxa de poupanca", "p": ["A porcentagem da renda que voce poupa e a alavanca principal.", "Ganhar mais ajuda, mas gastar menos tambem acelera."]},
+        {"h": "Invista com constancia", "p": ["O tempo e o juro composto fazem o trabalho pesado.", "Aportes regulares superam tentativas de acertar o timing."]},
+        {"h": "Tenha expectativas realistas", "p": ["Nao existe atalho garantido. Desconfie de promessas faceis.", "Independencia financeira e maratona, nao corrida."]}
+      ],
+      "faq": [
+        {"q": "Da para ser independente ganhando pouco?", "a": "E mais dificil, mas possivel com poupanca alta e tempo. Reduzir gastos ajuda tanto quanto ganhar mais."},
+        {"q": "Qual a regra dos 4%?", "a": "E uma referencia que sugere retirar ate 4% do patrimonio por ano. Serve como estimativa, nao garantia."}
+      ]
+    }
+  ]
+}

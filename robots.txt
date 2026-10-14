@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chr0n014.github.io/MOST/sitemap.xml

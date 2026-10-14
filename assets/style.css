@@ -1,0 +1,55 @@
+:root{
+  --bg:#0f1115; --card:#171a21; --text:#e7e9ee; --muted:#9aa3b2;
+  --accent:#4f8cff; --border:#252a34; --max:820px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+header.site{
+  position:sticky; top:0; z-index:10; background:rgba(15,17,21,.9);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--border);
+}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+header.site .wrap{display:flex; align-items:center; justify-content:space-between; height:60px}
+.brand{font-weight:700; font-size:18px; letter-spacing:.3px}
+nav a{margin-left:18px; color:var(--muted); font-size:14px}
+nav a:hover{color:var(--text)}
+main{padding:36px 0 60px}
+h1{font-size:30px; line-height:1.25; margin:.2em 0 .4em}
+h2{font-size:22px; margin-top:1.6em}
+h3{font-size:18px; margin-top:1.4em}
+p,li{color:#d7dbe3}
+.muted{color:var(--muted)}
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  padding:22px; margin:18px 0;
+}
+.grid{display:grid; gap:16px; grid-template-columns:1fr}
+@media(min-width:680px){.grid{grid-template-columns:1fr 1fr}}
+.post-title{margin:0 0 6px; font-size:19px}
+.post-title a{color:var(--text)}
+.tag{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px}
+.ad-slot{
+  border:1px dashed var(--border); border-radius:10px; min-height:90px;
+  display:flex; align-items:center; justify-content:center; color:var(--muted);
+  font-size:13px; margin:26px 0; background:#12151b;
+}
+footer.site{border-top:1px solid var(--border); padding:26px 0; color:var(--muted); font-size:14px}
+footer.site a{color:var(--muted)}
+article img{max-width:100%; border-radius:10px}
+form{display:grid; gap:12px; max-width:520px}
+input,textarea{
+  background:#12151b; border:1px solid var(--border); color:var(--text);
+  padding:12px; border-radius:9px; font:inherit;
+}
+button{
+  background:var(--accent); color:#fff; border:0; padding:12px 18px;
+  border-radius:9px; font:inherit; font-weight:600; cursor:pointer;
+}
+button:hover{filter:brightness(1.08)}
+.notice{background:#1a1f12; border-color:#2f3a1c}

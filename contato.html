@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato — Dinheiro Claro</title>
+<meta name="description" content="Fale com o Dinheiro Claro: dúvidas, sugestões de temas e correções.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Dinheiro Claro</a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="apoie.html">Apoie</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Contato</h1>
+  <p>Tem uma dúvida, sugestão de tema ou quer apontar uma correção? Envie uma mensagem.</p>
+  <form action="mailto:seu-email@exemplo.com" method="post" enctype="text/plain">
+    <label>Nome
+      <input type="text" name="nome" required>
+    </label>
+    <label>E-mail
+      <input type="email" name="email" required>
+    </label>
+    <label>Mensagem
+      <textarea name="mensagem" rows="5" required></textarea>
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+  <p class="muted">O formulário abre o seu programa de e-mail. Você também pode escrever direto para o endereço indicado acima.</p>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>© <span id="ano"></span> Dinheiro Claro — <a href="sobre.html">Sobre</a> · <a href="contato.html">Contato</a> · <a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a></p>
+  </div>
+</footer>
+<script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
+</body>
+</html>
